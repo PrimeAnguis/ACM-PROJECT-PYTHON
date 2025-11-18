@@ -1,11 +1,13 @@
+from datetime import date
+
+## Clase de tarea
+
 class Task:
-
-
-    def __init__(self, taskId, description, status, created_at, updated_at):
-        self._task_id = taskId
+    def __init__(self, taskId: int, description: str, status: str, updated_at: date|None):
+        self._task_id = taskId 
         self._description = description
         self._status = status
-        self._created_at = created_at
+        self._created_at = date.today()
         self._updated_at = updated_at
 
     def __str__(self):
@@ -30,18 +32,18 @@ class Task:
     
     def set_taskId(self, new_id):
         self._task_id = new_id
+            
+    def set_status(self, current_status: str):
 
-    def set_description(self, new_description):
-        self._description = new_description
+        if current_status == "NOT DONE":
+            self._status = "UN-FINISHED"
         
-    
-    def set_status(self, new_status):
-        self._status = new_status 
-    
-    def set_creation_date(self, new_date):
-        self._created_at = new_date
+        if current_status == "UN-FINISHED":
+            self._status = "FINISHED"
+
+    def set_updatedAt(self):
+        self._updated_at = date.today()
 
     
     ## GETTERS Y SETTERS ----------- DIVISION 
-
 
