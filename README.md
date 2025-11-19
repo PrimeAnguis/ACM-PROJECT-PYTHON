@@ -8,3 +8,7 @@ Su colaboración se extiende en:
 Colaboró en el apartado de la creación de la aplicación de fastApi (encontrada en main.py) y la edición y el manejo de la lista de tareas para que la API procese la información (encontrado en task_manager_tools.py) para
 instruirme en el correcto uso de los ENDPOINTS, en la construcción de los metodos HTTP que maneja la lista de tareas (get,post,delete,etc) y en el proceso de datos con pydantic para que la API pueda manejarlos.
 
+-------------------------------------
+
+El proyecto se ejecuta con el comando "fastapi dev main.py" en el directorio /src.
+
